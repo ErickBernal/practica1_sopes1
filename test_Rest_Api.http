@@ -1,0 +1,92 @@
+//para comprobar los endPoint uso "REST Client" con "Ctrl + Shif + p "
+//seleccionar "Rest client: Send Request"
+###
+GET http://127.0.0.1:8000/get
+
+###
+PUT http://127.0.0.1:8000/updateCar
+content-type: application/json
+
+{
+    "placa":    "5",
+    "marca":    "ma9",
+    "modelo":   "mo9",
+    "serie":    "s9",
+    "color":    "c9"
+}
+###
+DELETE  http://127.0.0.1:8000/deleteCar
+content-type: application/json
+
+{
+    "placa":"5"
+}
+
+###
+GET http://127.0.0.1:8000/getCar
+content-type: application/json
+
+{
+    "placa":"2"
+}
+
+###
+
+POST http://localhost:8000/create
+content-type: application/json
+
+{
+    "placa":    "1",
+    "marca":    "ma1",
+    "modelo":   "mo1",
+    "serie":    "s1",
+    "color":    "c1"
+}
+
+###
+
+POST http://127.0.0.1:8000/create
+content-type: application/json
+
+{
+    "placa":    "2",
+    "marca":    "ma2",
+    "modelo":   "mo2",
+    "serie":    "s2",
+    "color":    "c2"
+}
+
+###
+
+POST http://127.0.0.1:8000/create
+content-type: application/json
+
+{
+    "placa":    "3",
+    "marca":    "ma3",
+    "modelo":   "mo3",
+    "serie":    "s3",
+    "color":    "c3"
+}
+
+###
+POST http://127.0.0.1:8000/create
+content-type: application/json
+
+{
+    "placa":    "4",
+    "marca":    "ma4",
+    "modelo":   "mo4",
+    "serie":    "s4",
+    "color":    "c4"
+}
+
+###
+POST  http://127.0.0.1:8000/filterCarModel
+content-type: application/json
+
+{
+    "modelo":"5"
+}
+###
+

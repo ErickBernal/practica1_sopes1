@@ -1,0 +1,9 @@
+#   instalacion de nodeJs
+#   instalar npm
+#   instalar paquete de ayuda de react
+npm install -g create-react-app
+
+#   crear primer app en react
+create-react-app myfirstapp 
+
+

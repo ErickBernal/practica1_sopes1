@@ -1,0 +1,46 @@
+version: "3"
+services:
+  database:
+    restart: "always"
+    image: mongo
+    container_name: database
+    ports:
+      - "27017:27017"
+    volumes:
+      #- ./db:/data/db
+      -  /docker_volumens/sopes1_practica1:/data/db
+    networks:
+      - practica1
+
+  backend:
+    restart: "always"
+    image: pilloubool/backend
+    container_name: backend
+    depends_on:
+      - database
+    ports:
+      - "8000:8000"
+    links:
+      - database
+    networks:
+      - practica1
+
+  frontend:
+    restart: "always"
+    image: pilloubool/frontend
+    container_name: frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+    links:
+      - backend
+    networks:
+      - practica1
+
+networks:
+  practica1:
+    driver: "bridge"
+    ipam:
+      config:
+        - subnet: 172.16.24.16/29

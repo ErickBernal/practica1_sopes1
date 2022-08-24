@@ -1,0 +1,15 @@
+npm install -g create-react-app
+
+create-react-app myfirstapp 
+
+
+//------------------------------------------------------
+npm install exios
+
+npm install @fortawesome/react-fontawesome
+
+npm install @fortawesome/free-solid-svg-icons
+
+npm install reactstrap  
+
+npm start
